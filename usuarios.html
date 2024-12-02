@@ -4,88 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestión de Usuarios</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-        h1 {
-            color: #4CAF50;
-        }
-        form {
-            margin-top: 20px;
-            max-width: 400px;
-            background: #f9f9f9;
-            padding: 20px;
-            border-radius: 8px;
-            border: 1px solid #ddd;
-        }
-        form label {
-            font-weight: bold;
-        }
-        form input {
-            width: 100%;
-            padding: 8px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-        form button {
-            background: #4CAF50;
-            color: white;
-            padding: 10px 15px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-        form button:hover {
-            background: #45a049;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Gestión de Usuarios</h1>
-    <form id="createUserForm">
-        <label for="username">Nombre de Usuario:</label>
-        <input type="text" id="username" name="username" required>
+    <header>
+        <h1>Gestión de Usuarios</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="usuarios.html">Usuarios</a></li>
+                <li><a href="aulas.html">Aulas</a></li>
+                <li><a href="chat.html">Chat</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        <label for="role">Rol:</label>
-        <select id="role" name="role" required>
-            <option value="director">Director</option>
-            <option value="secretario">Secretario</option>
-            <option value="profesor">Profesor</option>
-            <option value="estudiante">Estudiante</option>
-        </select>
+    <main>
+        <section class="crear-usuario">
+            <h2>Crear Nuevo Usuario</h2>
+            <form id="createUserForm">
+                <label for="username">Nombre de Usuario:</label>
+                <input type="text" id="username" name="username" required>
 
-        <button type="submit">Crear Usuario</button>
-    </form>
+                <label for="role">Rol:</label>
+                <select id="role" name="role" required>
+                    <option value="director">Director</option>
+                    <option value="secretario">Secretario</option>
+                    <option value="profesor">Profesor</option>
+                    <option value="estudiante">Estudiante</option>
+                </select>
 
-    <div id="userList">
-        <h2>Lista de Usuarios</h2>
-        <ul id="users">
-            <!-- Aquí aparecerán los usuarios creados -->
-        </ul>
-    </div>
+                <button type="submit">Crear Usuario</button>
+            </form>
+        </section>
 
-    <script>
-        const form = document.getElementById('createUserForm');
-        const userList = document.getElementById('users');
+        <section class="lista-usuarios">
+            <h2>Lista de Usuarios</h2>
+            <ul id="userList">
+                <!-- Los usuarios se agregarán dinámicamente aquí -->
+            </ul>
+        </section>
+    </main>
 
-        form.addEventListener('submit', function (e) {
-            e.preventDefault();
+    <footer>
+        <p>&copy; 2024 Universidad de NewFlowers</p>
+    </footer>
 
-            // Obtener valores del formulario
-            const username = document.getElementById('username').value;
-            const role = document.getElementById('role').value;
-
-            // Crear un nuevo elemento en la lista
-            const li = document.createElement('li');
-            li.textContent = `${username} - Rol: ${role}`;
-            userList.appendChild(li);
-
-            // Resetear el formulario
-            form.reset();
-        });
-    </script>
+    <script src="scripts.js"></script> <!-- Archivo de JavaScript -->
 </body>
 </html>
