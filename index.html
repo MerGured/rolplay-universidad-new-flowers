@@ -4,58 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Universidad de NewFlowers</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            line-height: 1.6;
-        }
-        h1 {
-            color: #4CAF50;
-        }
-        .section {
-            margin-bottom: 30px;
-        }
-        .announcements {
-            background-color: #f9f9f9;
-            border: 1px solid #ddd;
-            padding: 15px;
-            border-radius: 5px;
-        }
-        .announcement {
-            margin-bottom: 10px;
-        }
-        .announcement h3 {
-            margin: 0;
-            color: #333;
-        }
-        .announcement p {
-            margin: 5px 0 0;
-            color: #555;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css"> <!-- Archivo de estilo CSS -->
 </head>
 <body>
-    <h1>Bienvenido a la Universidad de NewFlowers</h1>
-    <p>Este es un sitio de rol para estudiantes, profesores y más.</p>
-    
-    <!-- Sección de Anuncios -->
-    <div class="section announcements">
-        <h2>Anuncios</h2>
-        <div class="announcement">
-            <h3>[27 Nov] Nueva Aula Disponible</h3>
-            <p>Se ha habilitado un aula para la carrera de Ingeniería Informática.</p>
-        </div>
-        <div class="announcement">
-            <h3>[01 Dic] Reunión de Directores</h3>
-            <p>Se invita a todos los directores a participar en la reunión mensual.</p>
-        </div>
-        <div class="announcement">
-            <h3>[15 Dic] Concurso de Debate</h3>
-            <p>Estudiantes, ¡prepárense para el concurso anual de debate!</p>
-        </div>
-    </div>
+    <header>
+        <h1>Universidad de NewFlowers</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="usuarios.html">Gestión de Usuarios</a></li>
+                <li><a href="aulas.html">Aulas y Cursos</a></li>
+                <li><a href="chat.html">Chat y Mensajes</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <p>¡Explora más secciones de la universidad y participa en las actividades!</p>
+    <main>
+        <section class="intro">
+            <h2>Bienvenido a la Universidad de NewFlowers</h2>
+            <p>Conéctate con tu comunidad académica, accede a materiales de estudio y participa en actividades.</p>
+        </section>
+
+        <section class="anuncios">
+            <h2>Anuncios Destacados</h2>
+            <div class="anuncio">
+                <h3>Nuevo curso de programación</h3>
+                <p>Inscripciones abiertas para el nuevo curso de desarrollo web.</p>
+            </div>
+            <div class="anuncio">
+                <h3>Reunión de Directores</h3>
+                <p>Se llevará a cabo el próximo viernes. Verifica tu horario.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Universidad de NewFlowers</p>
+    </footer>
 </body>
 </html>
